@@ -1,0 +1,42 @@
+*{
+    margin :0;
+    padding :0;
+}
+button{
+    height :150px;
+    background-color: aquamarine ;
+    border :none;
+    margin :3px;
+}
+
+#up , #down{
+    width :400px;
+}
+
+#left , #right {
+    width :200px;
+    height: 150px ;
+}
+
+button{
+    color :black;
+    font-family: sans-serif ;
+    font-weight: bolder ;
+    font-size: 20px ;
+}
+
+#freeze{
+    height : 150px ;
+    width :200px;
+}
+
+.head{
+    background-color: aquamarine ;
+    height :50px;
+    padding-top :30px;
+}
+
+.head h1{
+    font-family: sans-serif ;
+    font-weight: bold ;
+}

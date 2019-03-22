@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta 
+        name='viewport' 
+        content='width=device-width, initial-scale=0.4, maximum-scale=1.0, user-scalable=0' 
+    />
     <title>pacman</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body style = "overflow: hidden">
+    <div class = "head"> <center><h1>pacman hates brute-force</h1></center> </div>
     <center>
         <canvas id = "canvas" height="600px" width="800px" style="background-color :black;"></canvas>
+    </center>
+    <center id = "buttons">
+        <div class="up">
+            <button id = "up" onfocus="onup()">up</button>
+        </div>
+        <div class="center">
+            <button id="left" onfocus="onleft()">left</button>
+            <button id = "freeze" onfocus="reset()">freeze</button>
+            <button id="right" onfocus="onright()">right</button>
+        </div>
+        <div class="down">
+            <button id = "down" onfocus="ondown()"> down</button>
+        </div>
     </center>
 </body>
 <script src="js/init.js"></script>
@@ -15,6 +34,7 @@
 <script src = "js/jarjar.js"></script>
 <script src = "./js/die.js"></script>
 <script src = "js/run.js"></script>
+<script src = "js/buttons.js"></script>
 
 <audio id = "begin" src="./pacman_beginning.wav" autoplay loop  ></audio>
 <audio id = "eat" src="./pacman_chomp.wav" ></audio>
