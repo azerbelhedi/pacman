@@ -48,6 +48,25 @@ class JarJar{
         ctx.fillStyle = this.color ;
         ctx.fill() ;
         ctx.closePath() ;
+
+        ctx.beginPath() ;
+        ctx.rect(this.x - 15 , this.y + 3 , 29 , 5) ;
+        ctx.fillStyle = "black" ;
+        ctx.fill() ;
+        ctx.closePath() ;
+
+        ctx.beginPath() ;
+        ctx.arc(this.x - 5 , this.y - 5 , 4 , 0 , Math.PI * 2 * this.state , true ) ;
+        ctx.fillStyle = "black" ;
+        ctx.fill() ;
+        ctx.closePath() ;
+
+        ctx.beginPath() ;
+        ctx.arc(this.x + 5 , this.y - 5 , 4 , 0 , Math.PI * 2 * this.state , true ) ;
+        ctx.fillStyle = "black" ;
+        ctx.fill() ;
+        ctx.closePath() ;
+
     }
     
     update(dx , dy){

@@ -47,6 +47,8 @@ class Coins{
                     //console.log("eat");
                     oneCoin.state = 0 ;
                     this.eated ++ ;
+                    document.querySelector("#eat").volume = 1 ;
+                    document.querySelector("#eat").play() ;
                     if(this.eated == this.coins.length){
                         alert("**you won**") ;
                         this.init() ;

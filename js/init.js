@@ -31,3 +31,56 @@ let mapBlocks = [
 ] ;
 
 
+const trajectory1 = [
+    {direction : "left" , magnitude : 300} ,
+    {direction : "down" , magnitude : 90} ,
+    {direction : "left" , magnitude : 100}  ,
+    {direction : "up" , magnitude : 90} ,
+    {direction : "left" , magnitude : 290} ,
+    {direction : "down" , magnitude : 180} ,
+    {direction : "right" , magnitude : 70} ,
+    {direction : "down" , magnitude : 100} ,
+    {direction : "left" , magnitude : 70} ,
+    {direction : "down" , magnitude : 210} ,
+    {direction : "right" , magnitude : 400} ,
+    {direction : "up" , magnitude : 230} ,
+    {direction : "right" , magnitude : 80} ,
+    {direction : "up" , magnitude : 100} ,
+    {direction : "right" , magnitude : 80 } ,
+    {direction : "up" , magnitude : 80} ,
+    {direction : "right" , magnitude : 120} ,
+    {direction : "up" , magnitude : 70}
+] ;
+
+
+let trajectory2 = [
+    {direction : "down" , magnitude : 100} ,
+    {direction : "right" , magnitude : 380} ,
+    {direction : "up" , magnitude : 90 } ,
+    {direction : "left" , magnitude : 380}
+] ;
+
+
+let trajectory3 = [
+    {direction : "right" , magnitude : 690} ,
+    {direction : "left" , magnitude : 690} 
+] ;
+
+let trajectory4 = [
+    {direction : "down" , magnitude : 120} ,
+    {direction : "left" , magnitude : 300} ,
+    {direction : "up" , magnitude : 120} ,
+    {direction : "right" , magnitude : 80} ,
+    {direction : "up" , magnitude : 80} ,
+    {direction : "left" , magnitude : 240} ,
+    {direction : "down" , magnitude : 80} ,
+    {direction : "right" , magnitude : 80} ,
+    {direction : "down" , magnitude : 120} ,
+    {direction : "left" , magnitude : 300} ,
+    {direction : "up" , magnitude : 120} ,
+    {direction : "right" , magnitude : 130} ,
+    {direction : "up" , magnitude : 100} ,
+    {direction : "right" , magnitude : 420} ,
+    {direction : "down" , magnitude : 120} ,
+    {direction : "right" , magnitude : 120} ,
+] ;

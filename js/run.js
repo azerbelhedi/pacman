@@ -13,6 +13,11 @@ jarjar.render() ;
 let coins = new Coins(canvas.width , canvas.width) ;
 //coins.update() ;
 
+let vader1 = new Vader(730 , 40 , 'green' , trajectory1) ;
+let vader2 = new Vader(200 , 120 , "pink" , trajectory2) ;
+let vader3 = new Vader(50 , 540 , "violet" , trajectory3) ;
+let vader4 = new Vader(730 , 300 , "white" , trajectory4) ; 
+
 document.addEventListener('keydown' , function(e){
     //console.log(e.code) ;
     if(e.code == "ArrowLeft"){
@@ -49,6 +54,12 @@ setInterval(function(){
     jarjar.update(right-left , down - up) ;
     coins.eat({x : jarjar.x , y : jarjar.y}) ;
     jarjar.border(mapBlocks) ;
+    vader1.update(trajectory1) ;
+    vader2.update(trajectory2) ;
+    vader3.update(trajectory3) ;
+    vader4.update(trajectory4) ;
+    dead(jarjar , [vader1 , vader2 , vader3 , vader4]) ;
+    //console.log(trajectory1) ;
     //test() ;
 } , 10) ;
 
