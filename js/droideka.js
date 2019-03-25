@@ -31,7 +31,7 @@ const nodeToTrajectory = (node , x , y ) => {
         console.log("node path error") ;
         console.log({x : x , tox : tox , y : y , toy : toy}) ;
     }
-    console.log([{direction : direction , magnitude : magnitude}]) ;
+    //console.log([{direction : direction , magnitude : magnitude}]) ;
     return [{direction : direction , magnitude : magnitude}] ;
 }
 
@@ -52,8 +52,8 @@ class Droideka{
         //this.trajectory = JSON.parse(JSON.stringify( trajectory));
 
         //
-        console.log("x : " + this.x) ;
-        console.log("y : " + this.y ) ;
+        //console.log("x : " + this.x) ;
+        //console.log("y : " + this.y ) ;
         this.moves = JSON.parse(JSON.stringify(nodeToTrajectory(node , this.x , this.y ))) ;
         this.trajectory = JSON.parse(JSON.stringify(nodeToTrajectory(node , this.x , this.y) )) ;
         //

@@ -25,6 +25,26 @@ let droideka4 = new Droideka(nodes[41].x , nodes[41].y , nodes[40] , "white" , "
 let droideka5 = new Droideka(nodes[52].x , nodes[52].y , nodes[53] , "green" , "red") ;
 let droideka6 = new Droideka(nodes[62].x , nodes[62].y , nodes[61] , "yellow" , "red") ;
 
+let droideka7 = new Droideka(nodes[46].x , nodes[46].y , nodes[45] , "yellow" , "red") ;
+
+
+let wou7ouch = [] ;
+const clones = () => {
+    for(let i = 0 ; i < 120 ; i++){
+        let wa7ch = new Droideka(nodes[62].x , nodes[62].y , nodes[61] , "violet" , "red") ;
+        wou7ouch.push(wa7ch) ;
+    
+        wa7ch = new Droideka(nodes[10].x , nodes[10].y , nodes[9] , "red" , "yellow") ;
+        wou7ouch.push(wa7ch) ;
+    
+        wa7ch = new Droideka(nodes[52].x , nodes[52].y , nodes[47] , "white" , "green") ;
+        wou7ouch.push(wa7ch) ;
+    
+        wa7ch = new Droideka(nodes[0].x , nodes[0].y , nodes[1] , "green" , "red") ;
+        wou7ouch.push(wa7ch) ;
+    }
+}
+
 
 let node = new Node(nodes)  ;
 
@@ -71,12 +91,17 @@ setInterval(function(){
     droideka4.update() ;
     droideka5.update() ;
     droideka6.update() ;
+    droideka7.update() ;
+    wou7ouch.map(wa7ch => {
+        wa7ch.update() ;
+    })
     //vader2.update(trajectory2) ;
     //vader3.update(trajectory3) ;
     //vader4.update(trajectory4) ;
     //droideka1.render() ;
     //droideka2.render() ;
-    dead(jarjar , [droideka3 , droideka2 , droideka1 , droideka4 , droideka5 , droideka6]) ;
+    dead(jarjar , [droideka3 , droideka2 , droideka1 , droideka4 , droideka5 , droideka6 , droideka7]) ;
+    dead(jarjar , wou7ouch) ;
     //node.test() ;
     //console.log(trajectory1) ;
     //test() ;

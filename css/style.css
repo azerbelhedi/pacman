@@ -39,3 +39,8 @@ button{
     font-family: sans-serif ;
     font-weight: bold ;
 }
+
+span:hover{
+    cursor: pointer;
+    color :violet;
+}
