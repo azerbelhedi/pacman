@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta 
-        name='viewport' 
-        content='width=device-width, initial-scale=0.4, maximum-scale=1.0, user-scalable=0' 
-    />
+
     <title>pacman</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,17 +23,22 @@
             <button id = "down" onfocus="ondown()"> down</button>
         </div>
     </center>
+    
 </body>
-<script src="js/init.js"></script>
+<audio id = "begin" src="./pacman_beginning.wav"  autoplay loop  ></audio>
+<audio id = "eat" src="./pacman_chomp.wav" ></audio>
+<audio id = "death" src="./pacman_death.wav"></audio>
+<audio id = "win" src="./pacman_intermission.wav"></audio>
+
+<script src = "js/init.js"></script>
+<script src = "./js/node.js"></script>
 <script src = "js/coins.js"></script>
 <script src = "js/vader.js"></script>
+<script src = "./js/droideka.js"></script>
 <script src = "js/map.js"></script>
 <script src = "js/jarjar.js"></script>
 <script src = "./js/die.js"></script>
 <script src = "js/run.js"></script>
 <script src = "js/buttons.js"></script>
 
-<audio id = "begin" src="./pacman_beginning.wav" autoplay loop  ></audio>
-<audio id = "eat" src="./pacman_chomp.wav" ></audio>
-<audio id = "death" src="./pacman_death.wav"></audio>
 </html>

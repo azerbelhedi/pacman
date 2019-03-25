@@ -3,8 +3,9 @@ let death = 0 ;
 const deathProtocol = () => {
     if(death == 0 ){
         death = 1 ;
-        alert("-_-  Game Over -_-") ;
         document.querySelector("#begin").pause() ;
+        document.querySelector("#death").play() ;
+        alert("-_-  Game Over -_-") ;
         location.reload() ;
     }
 }

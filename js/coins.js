@@ -50,6 +50,8 @@ class Coins{
                     document.querySelector("#eat").volume = 1 ;
                     document.querySelector("#eat").play() ;
                     if(this.eated == this.coins.length){
+                        document.querySelector("#eat").pause() ;
+                        document.querySelector("#win").play() ;
                         alert("**you won**") ;
                         this.init() ;
                     }
