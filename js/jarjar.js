@@ -50,7 +50,7 @@ class JarJar{
         ctx.closePath() ;
 
         ctx.beginPath() ;
-        ctx.rect(this.x - 15 , this.y + 3 , 29 , 5) ;
+        ctx.rect(this.x - 10 , this.y   , 20 , 10) ;
         ctx.fillStyle = "black" ;
         ctx.fill() ;
         ctx.closePath() ;
@@ -74,6 +74,12 @@ class JarJar{
         this.dy = dy ;
         this.x += dx ;
         this.y += dy ;
+        if(this.x < -10){
+            this.x = canvas.width -10 ;
+        }
+        else if(this.x > canvas.width){
+            this.x = 0 ;
+        }
         this.render() ;
     }
     

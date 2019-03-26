@@ -4,8 +4,15 @@ let ctx = canvas.getContext('2d') ;
 let mapBlocks = [
     {x :0 , y : 0 , height : 30 , width : canvas.width} ,
     {x :0 , y : canvas.height - 30 , height : 30 , width : canvas.width} , 
-    {x : 0 , y : 0 , height : canvas.height , width : 30} , 
-    {x : canvas.width - 30 , y : 0 , height : canvas.height , width : 30} , 
+   
+    {x : 0 , y : 250 , height : canvas.height - 250 , width : 30} ,
+    {x : 0 , y : 0 , height : 200 , width : 30} ,
+
+    {x : canvas.width - 30 , y : 0 , height : 200 , width : 30} , 
+    {x : canvas.width - 30 , y : 250 , height : canvas.height - 250 , width : 30} ,
+
+    {x : canvas.width - 30 , y : 250 , height : 20 , width : 30} ,
+
     {x : 100 , y : 80 , height : 30 , width :80} ,
     {x : 240 , y : 80 , height : 30 , width :80} ,
     {x : canvas.width - 170 , y : 80 , height : 30 , width :80} ,
