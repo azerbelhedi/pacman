@@ -7,7 +7,7 @@ class Map{
         // block : height , width , x , y
         ctx.beginPath() ;
         ctx.rect(block.x , block.y , block.width , block.height) ;
-        ctx.fillStyle = "blue" ;
+        ctx.fillStyle = "rgb(28, 28, 102)" ;
         ctx.fill() ;
         ctx.closePath() ;
     }

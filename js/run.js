@@ -1,8 +1,11 @@
+let score = 0 ;
+
 let left , right , up , down ;
 left = 0 ;
 right = 0 ;
 up = 0 ;
 down = 0 ;
+
 
 let map = new Map(mapBlocks) ;
 map.render() ;

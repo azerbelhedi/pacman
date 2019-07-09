@@ -4,9 +4,12 @@
 
     <title>pacman</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style = "overflow: hidden">
-    <div class = "head"> <center><h1>pacman hates brute-force : <span style = "color : blue" onclick="clones()">clones mode help</span></h1>  </center> </div>
+    <div class = "score">
+        <h1 id = "score">0</h1>
+    </div>
     <center>
         <canvas id = "canvas" height="600px" width="800px" style="background-color :black;"></canvas>
     </center>
@@ -24,6 +27,8 @@
         </div>
     </center>
     
+    
+
 </body>
 <audio id = "begin" src="./pacman_beginning.wav"  autoplay loop  ></audio>
 <audio id = "eat" src="./pacman_chomp.wav" ></audio>

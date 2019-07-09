@@ -67,33 +67,36 @@ class Droideka{
     }
 
     render(){
+        let localColors = ["rgb(0, 0, 95)" , "#101c66"]
+        let localColor = localColors[Math.floor(Math.random() * 2)]
+
         ctx.beginPath() ;
         ctx.rect(this.x , this.y + 5 , 25 , 15) ;
-        ctx.fillStyle = this.color1 ;
+        ctx.fillStyle = localColor ;
         ctx.fill() ;
         ctx.closePath() ;
 
         ctx.beginPath() ;
         ctx.rect(this.x + 3 , this.y , 19 , 5) ;
-        ctx.fillStyle = this.color1 ;
+        ctx.fillStyle = localColor ;
         ctx.fill() ;
         ctx.closePath() ;
 
         ctx.beginPath() ;
         ctx.rect(this.x , this.y + 20 , 5 , 5) ;
-        ctx.fillStyle = this.color1 ;
+        ctx.fillStyle = localColor ;
         ctx.fill() ;
         ctx.closePath() ;
 
         ctx.beginPath() ;
         ctx.rect(this.x + 10 , this.y + 20 , 5 , 5) ;
-        ctx.fillStyle = this.color1 ;
+        ctx.fillStyle = localColor ;
         ctx.fill() ;
         ctx.closePath() ;
 
         ctx.beginPath() ;
         ctx.rect(this.x + 20, this.y + 20 , 5 , 5) ;
-        ctx.fillStyle = this.color1 ;
+        ctx.fillStyle = localColor ;
         ctx.fill() ;
         ctx.closePath() ;
 
