@@ -1,4 +1,29 @@
+function pauseGame(){
+    pause = 1
+}
+
+function play(){
+    pause = 0
+}
+
 let score = 0 ;
+
+play()
+
+function switchPlay(){
+    let song = document.querySelector("#begin")
+    if(pause === 1 ){
+        pause = 0
+        document.querySelector("#stop-play").innerHTML = "Stop"
+        song.play()
+    }
+    else{
+        pause = 1
+        document.querySelector("#stop-play").innerHTML = "Play"
+        song.pause()
+    }
+}
+
 
 let left , right , up , down ;
 left = 0 ;
@@ -88,7 +113,8 @@ document.addEventListener('keyup' , function(e){
 }) ;
 
 setInterval(function(){
-    // render map
+    if(pause === 0){
+        // render map
     // update jarjar
     // handle event
     ctx.clearRect(0 , 0 , canvas.width , canvas.height) ;
@@ -118,7 +144,8 @@ setInterval(function(){
     //node.test() ;
     //console.log(trajectory1) ;
     //test() ;
-} , 10) ;
+    }
+} , 8) ;
 
 
 
@@ -150,3 +177,10 @@ setInterval(function(){
     }
     
 } , 1000)
+
+
+document.addEventListener("keydown" , function(e){
+    if(e.code === "KeyP"){
+        switchPlay()
+    }
+})

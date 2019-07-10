@@ -10,7 +10,7 @@ class Coins{
 
     render(coin){
         ctx.beginPath() ;
-        ctx.arc(coin.x , coin.y , 5  , 0 , Math.PI*2 ,true) ;
+        ctx.arc(coin.x , coin.y , 4  , 0 , Math.PI*2 ,true) ;
         //
         let localColors = ["red" , "orange" , "yellow" , "orange"]
         let localColor = localColors[Math.floor(Math.random() * 4)]

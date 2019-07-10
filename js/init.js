@@ -1,6 +1,9 @@
 let canvas = document.querySelector("#canvas") ;
 let ctx = canvas.getContext('2d') ;
 
+var pause = 1 ;
+
+
 let mapBlocks = [
     {x :0 , y : 0 , height : 30 , width : canvas.width } , // 0
     {x :0 , y : canvas.height - 30 , height : 30 , width : canvas.width} , // 1

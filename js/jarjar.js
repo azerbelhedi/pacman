@@ -40,6 +40,7 @@ class JarJar{
         this.state = 1 ;
         this.dx = 0 ;
         this.dy = 0 ;
+        this.acceleration = 1.08
     }
 
     render(){
@@ -70,10 +71,10 @@ class JarJar{
     }
     
     update(dx , dy){
-        this.dx = dx ;
-        this.dy = dy ;
-        this.x += dx ;
-        this.y += dy ;
+        this.dx = this.acceleration * dx ;
+        this.dy = this.acceleration *dy ;
+        this.x += this.acceleration *dx ;
+        this.y += this.acceleration *dy ;
         if(this.x < -10){
             this.x = canvas.width -10 ;
         }
