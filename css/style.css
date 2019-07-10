@@ -3,6 +3,11 @@
     padding :0;
 }
 
+#mark{
+    height : 10px ;
+    width : 10px ;
+}
+
 body{
     background-image: linear-gradient(135deg , rgb(170, 0, 0) , black )
 }
@@ -30,7 +35,8 @@ canvas{
     height : 40px ;
     font-size : 30px ;
     box-shadow: 1px 1px 5px black ;
-    color : blue ;
+    color : rgb(170, 0, 0) ;
+    text-shadow: 1px 1px 5px black ;
     font-weight: bolder ;
     font-family: cursive ;
     padding-left : 10px ;

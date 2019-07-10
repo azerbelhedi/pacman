@@ -8,18 +8,24 @@ down = 0 ;
 
 
 let map = new Map(mapBlocks) ;
+map.closeDoors()
 map.render() ;
 
 let jarjar = new JarJar(600 , 490 , 'yellow') ;
 jarjar.render() ;
 
+
+// map.closeDoors()
 let coins = new Coins(canvas.width , canvas.width) ;
+map.openDoors()
 //coins.update() ;
 
 //let vader1 = new Vader(730 , 40 , 'green' , trajectory1) ;
 //let vader2 = new Vader(200 , 120 , "pink" , trajectory2) ;
 //let vader3 = new Vader(50 , 540 , "violet" , trajectory3) ;
 //let vader4 = new Vader(730 , 300 , "white" , trajectory4) ; 
+
+// current monsters
 
 let droideka1 = new Droideka(nodes[0].x , nodes[0].y , nodes[1] , "green" , "yellow") ;
 let droideka2 = new Droideka(nodes[10].x , nodes[0].y , nodes[11] , "yellow" , "green") ;
@@ -55,12 +61,16 @@ document.addEventListener('keydown' , function(e){
     //console.log(e.code) ;
     if(e.code == "ArrowLeft"){
         left = 1 ; 
+        up = 0 ; down = 0 ;
     }else if(e.code == "ArrowRight"){
         right = 1 ;
+        up = 0 ; down = 0 ;
     }else if(e.code == "ArrowUp"){
         up = 1 ;
+        right = 0 ; left = 0 ;
     }else if(e.code == "ArrowDown"){
         down = 1 ;
+        right = 0 ; left = 0 ;
     }
 }) ;
 
@@ -111,6 +121,7 @@ setInterval(function(){
 } , 10) ;
 
 
+
 function test(){
     ctx.beginPath() ;
     ctx.rect(10 , 10 , 50 , 50) ;
@@ -118,3 +129,24 @@ function test(){
     ctx.fill() ;
     ctx.closePath() ;
 }
+
+
+let doorTimer = 0 
+setInterval(function(){
+    doorTimer++ 
+    document.querySelector("#time").innerHTML = 30 - doorTimer % 30
+    if(doorTimer%30 === 0){
+       if(map.state === "open"){
+        map.state = "close"
+        map.closeDoors()
+        jarjar.color = "red"
+    }
+    else{
+        map.state = "open"
+        map.openDoors()
+        jarjar.color = "yellow"
+
+    } 
+    }
+    
+} , 1000)

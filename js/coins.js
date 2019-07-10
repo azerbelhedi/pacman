@@ -23,7 +23,7 @@ class Coins{
     init(){
         score = 0 ;
         for(let y = 45 ; y < this.height - 200  ; y += 20){
-            for(let x = 45 ; x < this.width ; x += 20){
+            for(let x = 5 ; x < this.width ; x += 20){
                 let imgData = ctx.getImageData(x , y, this.width , this.height);
                 let blue = imgData.data[2];
                 //console.log(blue) ;
