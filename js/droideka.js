@@ -64,6 +64,8 @@ class Droideka{
         this.life = 1 ;
         this.height = 25 ;
         this.width = 25 ;
+
+        this.acceleration = 1
     }
 
     render(){
@@ -181,8 +183,8 @@ class Droideka{
             }
         }
 
-        this.x += this.dx ;
-        this.y += this.dy ;
+        this.x += this.dx * this.acceleration;
+        this.y += this.dy * this.acceleration;
         this.render() ;
     }
 

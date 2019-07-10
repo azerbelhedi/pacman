@@ -17,6 +17,7 @@ class Vader{
         this.life = 1 ;
         this.height = 25 ;
         this.width = 25 ;
+        this.acceleration = 1 ;
     }
 
     render(){
@@ -113,8 +114,8 @@ class Vader{
             }
         }
 
-        this.x += this.dx ;
-        this.y += this.dy ;
+        this.x += this.dx * this.acceleration ;
+        this.y += this.dy * this.acceleration;
         this.render() ;
     }
 

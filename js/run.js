@@ -112,6 +112,8 @@ document.addEventListener('keyup' , function(e){
     }
 }) ;
 
+let frame = 9
+
 setInterval(function(){
     if(pause === 0){
         // render map
@@ -145,7 +147,7 @@ setInterval(function(){
     //console.log(trajectory1) ;
     //test() ;
     }
-} , 8) ;
+} , frame) ;
 
 
 
@@ -159,6 +161,8 @@ function test(){
 
 
 let doorTimer = 0 
+let hardSong = document.querySelector("#hard")
+let normalSong = document.querySelector("#begin")
 setInterval(function(){
     doorTimer++ 
     document.querySelector("#time").innerHTML = 30 - doorTimer % 30
@@ -167,12 +171,17 @@ setInterval(function(){
         map.state = "close"
         map.closeDoors()
         jarjar.color = "red"
+        normalSong.pause()
+        hardSong.play()
+        frame = 5
     }
     else{
         map.state = "open"
         map.openDoors()
         jarjar.color = "yellow"
-
+        normalSong.play()
+        hardSong.pause()
+        frame = 9
     } 
     }
     
